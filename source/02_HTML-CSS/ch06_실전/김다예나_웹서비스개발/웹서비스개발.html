@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마이페이지 - 개인정보변경</title>
+    <link rel="stylesheet" href="웹서비스개발.css">
+</head>
+<body>
+    <div id="body">
+        <nav>
+            <div id="nav_left">
+                <ul>
+                    <li><a href="#">LOGO</a></li>
+                    <li style="border: 1px solid gray;"><a href="#">참여하기</a></li>
+                    <li style="border: 1px solid gray;"><a href="#">개설하기</a></li>
+                    <li style="border: 1px solid gray;"><a href="#">검색하기</a></li>
+                </ul>
+            </div>
+            
+            <div id="nav_right">
+                <ul>
+                    <li>홍길동님</li>
+                    <li><a href="#">로그아웃</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content">
+            <div id="title">마이페이지</div>
+            <div id="lnb">
+                <ul>
+                    <li><a href="#">나의여행</a></li>
+                    <li><a href="#">참여여행</a></li>
+                    <li><a href="#">관심여행</a></li>
+                    <li><a href="#">개인정보변경</a></li>
+                    <li><a href="#">비밀번호변경</a></li>
+                </ul>
+            </div>
+            <div id="my_content">
+                <div id="sub_title">개인정보변경</div>
+                <div id="modify">
+                    <form action="#" method="post">
+                        <table>
+                            <tr>
+                                <td><label for="user_name">이름</label></td>
+                                <td><input type="text" id="user_name" name="user_name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="user_id">아이디</label></td>
+                                <td><input type="text" id="user_id" name="user_id"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="user_email">이메일</label></td>
+                                <td><input type="email" id="user_email" name="user_email"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="user_phone">전화</label></td>
+                                <td><input type="text" id="user_phone" name="user_phone"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="user_birth">생년월일</label></td>
+                                <td><input type="text" id="user_birth" name="user_birth"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="user_address">주소</label></td>
+                                <td><input type="text" id="user_address" name="user_address"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: center; padding-top: 20px;">
+                                    <input type="submit" value="저장">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            footer
+        </footer>
+    </div> 
+
+</body>
+</html>
