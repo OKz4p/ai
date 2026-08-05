@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <title></title>
+    <style>
+        fieldset{
+            width: 450px; height: 250px; margin: 0 auto;
+        }
+        p{text-align: center; font-size: 1.5em;}
+        input[type="number"]{
+            width: 150px;
+            height: 40px;
+        }
+        input[type='submit']{
+            width: 80px;
+            height: 40px;
+            font-size: 1em;
+            text-align: center;
+            font-weight: bold;
+            background-color: lightgray;
+        }
+    </style>
+    <script>
+        function chk(){
+            let n1 = frm.su1.value;
+            let n2 = frm.su2.value;
+            if(n1 === "" || n2 === ""){
+                alert("수를 입력하세요");
+                return false;
+            }
+            // 첫번째 수와 두번째 수를 가져와서 몇번째 수가 얼마 더 큰지 alert
+            let su1 = Number(n1);
+            let su2 = Number(n2);
+            if(su1>su2){
+                let diff = su1 - su2;
+                alert("첫번째 수가" + diff +"더 큽니다");
+            }else if(su2>su1){
+                let diff = su2 - su1;
+                alert("두번째 수가" + diff +"더 큽니다");
+            }else{
+                alert("두 수가 같습니다");
+            }return false;
+        } 
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <fieldset>
+            <p>첫번째 수 <input type="number" name="su1"></p>
+            <p>두번째 수 <input type="number" name="su2"></p>
+            <p><input type="submit" value="결과" ></p>
+        </fieldset>
+    </form>
+</body>
+</html>
