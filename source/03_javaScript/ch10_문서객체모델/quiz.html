@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <title></title>
+    <style>
+        table{ width: 280px; height: 100px; margin: 10px auto;}
+        h3{text-align: center;}
+    </style>
+    <script>
+        // 0번째 td부터 6번째 td까지 backhround-color를 무지개색으로 입힌다(window.onload)
+            // tag로 가져오기 => 배열
+            // 선택자로 가져오기 => 배열
+            const colors = ["red", "orange", "yellow", "green", "blue", "darkblue", "purple"];
+            const bgColorChange = n =>{
+                if(n===7){
+                    document.body.style.backgroundColor = "";
+                }else{
+                    document.body.style.backgroundColor = colors[n];
+                }
+            };
+            window.onload = ()=> {
+                const tds = document.querySelectorAll("td");
+                for(let i = 0; i<tds.length; i++){
+                    tds[i].style.backgroundColor = colors[i];
+                }
+            }
+        
+    </script>
+</head>
+<body>
+    <h3>quiz:마우스를 올리면 바탕화면도 해당 색상으로</h3>
+    <table>
+        <tr onmouseout="bgColorChange(7)">
+            <td onmouseover="bgColorChange(0)"></td>
+            <td onmouseover="bgColorChange(1)"></td>
+            <td onmouseover="bgColorChange(2)"></td>
+            <td onmouseover="bgColorChange(3)"></td>
+            <td onmouseover="bgColorChange(4)"></td>
+            <td onmouseover="bgColorChange(5)"></td>
+            <td onmouseover="bgColorChange(6)"></td>
+        </tr>
+    </table>
+</body>
+</html>
