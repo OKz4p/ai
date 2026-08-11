@@ -14,14 +14,10 @@
             // 선택자로 가져오기 => 배열
             const colors = ["red", "orange", "yellow", "green", "blue", "darkblue", "purple"];
             const bgColorChange = n =>{
-                if(n===7){
-                    document.body.style.backgroundColor = "";
-                }else{
-                    document.body.style.backgroundColor = colors[n];
-                }
+                document.body.style.backgroundColor = colors[n];
             };
             window.onload = ()=> {
-                const tds = document.querySelectorAll("td");
+                var tds = document.querySelectorAll("td");
                 for(let i = 0; i<tds.length; i++){
                     tds[i].style.backgroundColor = colors[i];
                 }
